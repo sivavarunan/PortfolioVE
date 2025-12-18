@@ -9,6 +9,7 @@ import Portfolio from "./components/Portfolio";
 import RecentWork from "./components/RecentWork";
 import Contact from "./components/contact";
 import Footer from "./components/Footer";
+import Loader from "./components/loader";
 
 const recentVideos = [
   { id: "mW9GltKoEoc", title: "Motion Graphics Reel 1" },
@@ -23,6 +24,7 @@ export default function Home() {
   const y = useTransform(scrollY, [0, 6000], ["0%", "-25%"]);
 
   return (
+    <Loader>
     <main className="relative">
 
       <motion.div
@@ -54,5 +56,6 @@ export default function Home() {
         <Footer />
       </div>
     </main>
+    </Loader>
   );
 }

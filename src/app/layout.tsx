@@ -39,6 +39,9 @@ const avantGarde = localFont({
 export const metadata: Metadata = {
   title: "Sivavarunan Portfolio",
   description: "created by siva",
+   icons: {
+    icon: '/fav.png',
+  },
 };
 
 export default function RootLayout({
