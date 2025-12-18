@@ -27,4 +27,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+h1, h2, h3, h4 {
+  font-family: var(--font-avant-garde);
+}
 
+h1, h2 {
+  letter-spacing: -0.02em;
+}

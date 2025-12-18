@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 
+
 interface Video {
   id: string;
   title: string;
@@ -14,9 +15,9 @@ export default function RecentWork({ videos }: RecentWorkProps) {
   return (
     <section id="recent-work" className="px-6 py-16">
       <Reveal>
-        <h3 className="text-3xl font-bold mb-12 text-center text-white">
+        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
           Recent Work
-        </h3>
+        </h2>
       </Reveal>
 
       <div className="flex flex-wrap justify-center gap-8">

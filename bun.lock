@@ -5,6 +5,7 @@
     "": {
       "name": "my-next-app",
       "dependencies": {
+        "@next/font": "^14.2.15",
         "framer-motion": "^12.23.26",
         "next": "16.0.10",
         "react": "19.2.1",
@@ -154,6 +155,8 @@
     "@next/env": ["@next/env@16.0.10", "", {}, "sha512-8tuaQkyDVgeONQ1MeT9Mkk8pQmZapMKFh5B+OrFUlG3rVmYTXcXlBetBgTurKXGaIZvkoqRT9JL5K3phXcgang=="],
 
     "@next/eslint-plugin-next": ["@next/eslint-plugin-next@16.0.10", "", { "dependencies": { "fast-glob": "3.3.1" } }, "sha512-b2NlWN70bbPLmfyoLvvidPKWENBYYIe017ZGUpElvQjDytCWgxPJx7L9juxHt0xHvNVA08ZHJdOyhGzon/KJuw=="],
+
+    "@next/font": ["@next/font@14.2.15", "", { "peerDependencies": { "next": "*" } }, "sha512-QopYhBmCDDrNDynbi+ZD1hDZXmQXVFo7TmAFp4DQgO/kogz1OLbQ92hPigJbj572eZ3GaaVxNIyYVn3/eAsehg=="],
 
     "@next/swc-darwin-arm64": ["@next/swc-darwin-arm64@16.0.10", "", { "os": "darwin", "cpu": "arm64" }, "sha512-4XgdKtdVsaflErz+B5XeG0T5PeXKDdruDf3CRpnhN+8UebNa5N2H58+3GDgpn/9GBurrQ1uWW768FfscwYkJRg=="],
 

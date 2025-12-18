@@ -1,12 +1,59 @@
+"use client";
+
+import Image from "next/image";
+
 export default function Navbar() {
-    return (
-    <nav className="flex justify-between items-center px-8 py-4">
-    <h1 className="text-xl font-bold">SIVAEDITS_25</h1>
-    <ul className="flex gap-6 text-sm">
-    <li>Work</li>
-    <li>About</li>
-    <li>Contact</li>
-    </ul>
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4
+                    bg-white/70 backdrop-blur-md">
+
+      {/* Logo + Name */}
+      <button
+        onClick={scrollToTop}
+        className="flex items-center gap-3 cursor-pointer"
+      >
+        <Image
+          src="/logo.jpg"   // 🔹 put logo inside /public
+          alt="Siva Edits Logo"
+          width={32}
+          height={32}
+          className="object-contain"
+        />
+        <h1 className="text-xl font-semibold text-black">
+          SIVAEDITS_25
+        </h1>
+      </button>
+
+      {/* Nav Links */}
+      <ul className="flex gap-6 text-sm text-black">
+        <li
+          className="cursor-pointer hover:opacity-70 transition"
+          onClick={() => scrollToSection("recent-work")}
+        >
+          Work
+        </li>
+        <li
+          className="cursor-pointer hover:opacity-70 transition"
+          onClick={() => scrollToSection("portfolio")}
+        >
+          About
+        </li>
+        <li
+          className="cursor-pointer hover:opacity-70 transition"
+          onClick={() => scrollToSection("contact")}
+        >
+          Contact
+        </li>
+      </ul>
     </nav>
-    );
-    }
+  );
+}
