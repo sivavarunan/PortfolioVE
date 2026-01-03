@@ -108,7 +108,7 @@ export default function Showreel({
             >
               <iframe
                 className="absolute top-0 w-full h-full rounded-md shadow-lg"
-                src={`https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&autoplay=0&mute=1&loop=1&playlist=${youtubeId}`}
+                src={`https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&autoplay=0&mute=0&loop=1&playlist=${youtubeId}`}
                 title="Video Editor Showreel"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

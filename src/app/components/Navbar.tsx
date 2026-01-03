@@ -13,22 +13,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-3 py-4
                     bg-white/70 backdrop-blur-md">
 
-      {/* Logo + Name */}
       <button
         onClick={scrollToTop}
         className="flex items-center gap-3 cursor-pointer"
       >
         <Image
-          src="/logo.jpg"   // 🔹 put logo inside /public
+          src="/logo.jpg"
           alt="Siva Edits Logo"
           width={32}
           height={32}
-          className="object-contain"
+          className="object-fill cursor-pointer rounded-4xl"
         />
-        <h1 className="text-xl font-semibold text-black">
+        <h1 className="text-xl font-semibold text-black hover:opacity-80 transition">
           SIVAEDITS_25
         </h1>
       </button>
