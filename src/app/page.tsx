@@ -12,8 +12,8 @@ import Footer from "./components/Footer";
 import Loader from "./components/loader";
 
 const recentVideos = [
-  { id: "mW9GltKoEoc", title: "Motion Graphics Reel 1" },
-  { id: "cuBjX9_O8SQ", title: "Video Editing Reel 2" },
+  { id: "Kx_CBr2HKiQ", title: "Motion Graphics Reel 1" },
+  { id: "VENtAF9htU4", title: "Video Editing Reel 2" },
   { id: "3QeU3IMBGxk", title: "Motion Design Reel 3" },
 ];
 
