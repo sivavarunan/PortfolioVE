@@ -44,8 +44,22 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Showreel
-          youtubeId="BKheYm0Raeo"
-          youtubeIdMotion="9NzuSHEsUZg"
+          reels={[
+            {
+              id: "9NzuSHEsUZg",
+              title: "Motion Graphics Reel",
+              description:
+                "A collection of my best motion graphics work — animated visuals, kinetic typography, and creative motion design.",
+              aspect: "landscape",
+            },
+            {
+              id: "BKheYm0Raeo",
+              title: "Video Editing Reel",
+              description:
+                "Cinematic cuts, seamless transitions, and storytelling that keeps viewers engaged from start to finish.",
+              aspect: "landscape",
+            },
+          ]}
           youtubeChannel="https://www.youtube.com/@sivaedits_25"
           instagram="https://www.instagram.com/sivaedits_25"
         />

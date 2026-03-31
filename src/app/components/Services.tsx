@@ -28,54 +28,51 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="
-        relative
-        max-w-6xl mx-auto
-        my-20
-        px-6 sm:px-10 py-16
-        rounded-3xl
-        bg-white/10
-        backdrop-blur-xl
-        border border-white/20
-        shadow-[0_30px_80px_rgba(0,0,0,0.35)]
-      "
+      className="relative max-w-6xl mx-auto my-14 px-6 sm:px-10 py-12 rounded-3xl
+                 bg-white/70 backdrop-blur-xl border border-white/40
+                 shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
     >
       {/* subtle glass highlight */}
-      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-white/30 to-transparent" />
 
-      <section className="px-8 py-20 text-white relative z-10">
+      <div className="px-2 sm:px-8 py-10 sm:py-14 relative z-10">
         <Reveal>
-          <h2 className="text-4xl font-bold mb-4 text-center text-black">What I Do</h2>
-          <p className="text-gray-800 max-w-4xl mb-10 mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center text-black">What I Do</h2>
+          <p className="text-gray-900 max-w-2xl mb-10 mx-auto text-center text-sm sm:text-base">
             I combine creativity and technical expertise to bring your vision to life.
-            From cinematic edits to motion graphics and visual effects, I craft immersive experiences that engage and inspire.
+            From cinematic edits to motion graphics and visual effects.
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service) => (
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+          {services.map((service, index) => (
             <Reveal key={service.title}>
               <motion.div
-                className="relative flex flex-col items-center justify-center h-64 rounded-xl shadow-lg cursor-pointer overflow-hidden text-center hover:scale-105 transition-transform duration-300"
-                whileHover={{ scale: 1.08 }}
+                className="relative flex flex-col items-center justify-end h-72 sm:h-80 rounded-2xl
+                           shadow-lg overflow-hidden cursor-pointer group"
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
                 style={{
                   backgroundImage: `url(${service.image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  backdropFilter: "blur(8px)", // subtle glass effect on card itself
-                  backgroundColor: "rgba(255,255,255,0.1)"
                 }}
               >
-                <div className="p-4 rounded-md bg-black/30">
-                  <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                  <p className="text-gray-200 text-sm">{service.description}</p>
+                {/* Dark gradient overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent
+                               group-hover:from-black/90 transition-all duration-300" />
+
+                <div className="relative z-10 p-6 text-white">
+                  <h4 className="text-xl font-bold mb-2">{service.title}</h4>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </motion.div>
             </Reveal>
           ))}
         </div>
-      </section>
+      </div>
     </motion.section>
   );
 }

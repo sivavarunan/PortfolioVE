@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 /* ✅ Avant Garde Local Font */
@@ -37,10 +33,11 @@ const avantGarde = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sivavarunan Portfolio",
-  description: "created by siva",
-   icons: {
-    icon: '/fav.png',
+  title: "Sivavarunan | Video Editor & Motion Graphics Designer",
+  description:
+    "Freelance video editor and motion graphics designer crafting cinematic edits, VFX, and visual stories. Based in Sri Lanka.",
+  icons: {
+    icon: "/fav.png",
   },
 };
 
@@ -53,8 +50,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
-          ${geistSans.variable}
-          ${geistMono.variable}
+          ${jakarta.variable}
           ${avantGarde.variable}
           antialiased
         `}

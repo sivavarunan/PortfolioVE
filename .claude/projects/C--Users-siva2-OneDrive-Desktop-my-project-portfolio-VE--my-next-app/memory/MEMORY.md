@@ -1,0 +1,2 @@
+- [Use bun for builds](feedback_use_bun.md) — User prefers bun over npm/npx for all scripts
+- [Prefer glassy light theme](feedback_glass_style.md) — Use glass morphism, no dark theme cards

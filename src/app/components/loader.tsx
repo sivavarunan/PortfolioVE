@@ -7,44 +7,52 @@ export default function Loader({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1300); // Slightly longer for cinematic feel
+    const timer = setTimeout(() => setLoading(false), 1300);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {/* Loader */}
       <AnimatePresence>
         {loading && (
           <motion.div
             key="loader"
-            className="fixed inset-0 bg-white z-50 flex items-center justify-center"
+            className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center gap-4"
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 1.2, ease: "easeInOut" } }}
+            exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
           >
             <motion.h1
-              className="text-5xl sm:text-7xl font-bold text-black"
-              initial={{ scale: 1, opacity: 1 }}
-              animate={{
-                scale: 5,
-                opacity: 0.3,
-              }}
-              transition={{ duration: 1.8, ease: "easeInOut" }}
+              className="text-4xl sm:text-6xl font-bold text-black tracking-tight"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               SIVAEDITS_25
             </motion.h1>
+            <motion.div
+              className="w-16 h-[2px] bg-black/30 rounded-full overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <motion.div
+                className="h-full bg-black"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.9, delay: 0.3, ease: "easeInOut" }}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Site content with smooth fade-in */}
       <AnimatePresence>
         {!loading && (
           <motion.div
             key="site"
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             {children}
           </motion.div>
