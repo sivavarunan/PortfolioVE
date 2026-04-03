@@ -50,7 +50,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal>
-          <div className="mt-4 flex gap-4 flex-wrap justify-center">
+          <div className="mt-8 sm:mt-4 flex gap-4 flex-wrap justify-center">
             <button
               className="px-7 py-3 bg-black text-white rounded-full text-sm font-medium
                          hover:bg-gray-800 hover:scale-105 transition-all duration-300
